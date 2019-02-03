@@ -1,28 +1,30 @@
-<h1 id="research" class="unnumbered">Research</h1>
-<p>Throughout my doctoral study, there are several projects that I have worked on. The overall goal that has tied the research together is the multi-material beam hardening correction (BHC) for industrial CBCT. Starting with the implementation and a thorough comparison of existing BHC algorithms, I gradually embarked on developing innovative algorithms which can bridge the gap between the state-of-the-art and industrial needs. One main body of work involves the development of efficient and robust BHC algorithms. The second body of work involves the development of X-ray spectral estimation algorithm. By integrating the outcome of the second body of work into the first, the optimal image quality can be achieved.</p>
-<h2 id="linear-regression-lr-based-memory-saving-bhc-algorithm">Linear regression (LR) based memory saving BHC algorithm</h2>
-<div class="figure"><img src="surf" alt="An LR function maps the polychromatic curve to the monochromatic plane." />
-<p class="caption">An LR function maps the polychromatic curve to the monochromatic plane.</p>
-</div>
-<p>State-of-the-art multi-material BHC algorithms that are tailored to medical imaging often fail to adept to industrial applications for mainly three reasons. First of all, many industrial samples consist of various dense metal materials (titanium, steel, copper, <em>etc</em>). Also, some applications (<em>e.g.</em> dimensional metrology) require extremely high resolution and edge preservation. Therefore, they are normally acquired in large datasets (<em>e.g.</em> <span class="math">2000 &times; 2000 &times; 3600</span>, 16bit). Last but not least, rapid image processing is often demanded by customers.</p>
-<p>I have developed an LR based algorithm to meet industrial needs. In contrast to the conventional method, which uses a piece-wise lookup table, the novel method is based on a polynomial representation of the whole imaging system. The results of this method are comparable to (and sometimes better than) those of the conventional method, with only <span class="math">0.6%</span> of its memory use. Image processing can be finished within 30min on a laptop computer. The efficient use of memory allows my method to process the dataset of a four-material sample in our laboratory without trouble.</p>
-<h2 id="deep-neural-network-dnn-based-end-to-end-bhc-pipeline" class="unnumbered">Deep neural network (DNN) based end-to-end BHC pipeline</h2>
-<div class="figure"><img src="https://github.com/Wenchao320/Wenchao320.github.io/blob/master/n3.jpg" alt="DNN architecture." />
-<p class="caption">DNN architecture.</p>
-</div>
-<p>Taking the above algorithm as a cornerstone, I developed a DNN based BHC algorithm. Unlike the above algorithm which involves pre-processing, it is trained end-to-end and hence requires significantly less supervision during training, making it more generally applicable in realistic settings. The DNN architecture consists of two modules: data augmentation and monochromatic image synthesis. This pipeline can learn to accurately correct beam hardening with a training dataset as small as <span class="math">10<em>E</em>4</span> (32bit).</p>
-<div class="figure"><img src="https://github.com/Wenchao320/Wenchao320.github.io/blob/master/image.jpg" alt="Results on a four-material phantom." />
-<p class="caption">Results on a four-material phantom.</p>
-</div>
-<p>Another ongoing project in our laboratory set out to explore the use of a convolutional neural network (CNN) for generic metal artifact reduction. A modified U-Net CNN architecture was built in PyTorch. So far the network has been capable of reducing metal artifacts of simulated samples.</p>
-<h2 id="expectationmaximization-em-based-x-ray-spectral-estimation" class="unnumbered">Expectation&ndash;maximization (EM) based X-ray spectral estimation</h2>
-<div class="figure"><img src="spec.gif" alt="Evolution of the estimated spectrum in each iteration." />
-<p class="caption">Evolution of the estimated spectrum in each iteration.</p>
-</div>
-<p>In CBCT imaging, multiple important applications rely on the knowledge of the X-ray spectrum, such as dual-energy material decomposition and BHC. X-ray spectral estimation is a well-established topic in the field of CT. The estimation accuracy is subject to various factors, among which the most influential one is scattering. Conventional spectral estimation methods all require extra hardware for X-ray scattering reduction. I developed a spectral estimation scheme with the capability of eliminating scattering from a pure signal processing perspective. It simultaneously updates both the scattering and X-ray spectral profile in each iteration without using extra hardware. The root-mean-square error (RMSE) of the estimated spectrum is under <span class="math">0.1%</span> in all experiments.</p>
-<h2 id="phantom-based-algorithm-validation-framework" class="unnumbered">Phantom based algorithm validation framework</h2>
-<div class="figure"><img src="Wenchao320.github.io/framework.jpg" alt="Algorithm validation phantom and its reconstructed central slice." />
-<p class="caption">Algorithm validation phantom and its reconstructed central slice.</p>
-</div>
-<p>This project aimed at defining a framework to study image processing algorithm performance in a quantitative manner. Given that standardized quality metrics like SNR or RMSE mix influences from various sources, it may be hard to analyze the image quality in great detail using them. This framework integrates various metrics that reflect different aspects of imaging performance and a phantom to capture these metrics. The metrics are CNR, MTF, and two task-driven artifact indices. The phantom allows all metrics to be captured in one reconstructed image.</p>
-<p>This framework was applied to address uncertainties in parameters, data, and model selection for both filtered-backprojection (FBP) and model-based reconstruction BHC schemes. The outcome of this project laid the foundation of all the above studies.</p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Wenchao</title>
+</head>
+<body id='home'>
+
+<header>
+    <h1>Wenchao Cao</h1>
+	<p><strong>email:</strong> wenchao.cao@kuleuven.be</p>
+	
+	<nav>
+	    <ul>
+		     <li><a href='index.html'>Home</a></li>
+			 <li><a href='research.html'>Research</li>
+			 <li><a href='cv.html'>CV</li>
+		</ul>
+	</nav>
+</header>
+
+<section class='container'>
+<h2>Welcome</h2>
+    <p>Wenchao Cao is completing her Ph.D. at the Katholieke Universiteit Leuven with an expected degree date of May 2019. Her research is dedicated to the development of tomographic image/data processing algorithms. Specific topics investigated by Wenchao have included novel beam hardening correction algorithms for CBCT, a novel X-ray spectral estimation scheme that does not require scattering reduction, and imaging performance evaluation and quantitative validation.</p>
+    <p>Her passion is to advance tomographic image processing by combining machine learning techniques and the mathematical modeling of imaging physics.</p>
+</section>
+ 
+
+</body>
+</html>
