@@ -7,11 +7,11 @@
 <p>State-of-the-art multi-material BHC algorithms that are tailored to medical imaging often fail to adept to industrial applications for mainly three reasons. First of all, many industrial samples consist of various dense metal materials (titanium, steel, copper, <em>etc</em>). Also, some applications (<em>e.g.</em> dimensional metrology) require extremely high resolution and edge preservation. Therefore, they are normally acquired in large datasets (<em>e.g.</em> <span class="math">2000 &times; 2000 &times; 3600</span>, 16bit). Last but not least, rapid image processing is often demanded by customers.</p>
 <p>I have developed an LR based algorithm to meet industrial needs. In contrast to the conventional method, which uses a piece-wise lookup table, the novel method is based on a polynomial representation of the whole imaging system. The results of this method are comparable to (and sometimes better than) those of the conventional method, with only <span class="math">0.6%</span> of its memory use. Image processing can be finished within 30min on a laptop computer. The efficient use of memory allows my method to process the dataset of a four-material sample in our laboratory without trouble.</p>
 <h2 id="deep-neural-network-dnn-based-end-to-end-bhc-pipeline" class="unnumbered">Deep neural network (DNN) based end-to-end BHC pipeline</h2>
-<div class="figure"><img src="n3" alt="DNN architecture." />
+<div class="figure"><img src="https://github.com/Wenchao320/Wenchao320.github.io/blob/master/n3.jpg" alt="DNN architecture." />
 <p class="caption">DNN architecture.</p>
 </div>
 <p>Taking the above algorithm as a cornerstone, I developed a DNN based BHC algorithm. Unlike the above algorithm which involves pre-processing, it is trained end-to-end and hence requires significantly less supervision during training, making it more generally applicable in realistic settings. The DNN architecture consists of two modules: data augmentation and monochromatic image synthesis. This pipeline can learn to accurately correct beam hardening with a training dataset as small as <span class="math">10<em>E</em>4</span> (32bit).</p>
-<div class="figure"><img src="image" alt="Results on a four-material phantom." />
+<div class="figure"><img src="https://github.com/Wenchao320/Wenchao320.github.io/blob/master/image.jpg" alt="Results on a four-material phantom." />
 <p class="caption">Results on a four-material phantom.</p>
 </div>
 <p>Another ongoing project in our laboratory set out to explore the use of a convolutional neural network (CNN) for generic metal artifact reduction. A modified U-Net CNN architecture was built in PyTorch. So far the network has been capable of reducing metal artifacts of simulated samples.</p>
