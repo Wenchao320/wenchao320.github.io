@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+<html>
+<head>
+<style>
+div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+</style>
+</head>
+<header>
+<ul>
+<li class="current menu0">Home</li>
+<li class="menu1">Research</li>
+<li class="menu2">Courses</li>
+<li class="menu3">Contact</li>
+</ul>
+</header>
+<div id="slides"><nav><em id="next" class="fa fa-chevron-circle-down"></em></nav>
+<div class="slide slide0">
+<div id="title">
+<h1>Welcome</h1>
+<p style="text-align: left;">I<span style="font-family: symbol;">&cent;</span>m completing my Ph.D. at the Katholieke Universiteit Leuven with an expected degree date of May 2019. My research is dedicated to the development of tomographic image/data processing algorithms. Specific topics that I have investigated are: novel beam hardening correction algorithms for CBCT, a novel X-ray spectral estimation scheme that does not require scattering reduction, and imaging performance evaluation and quantitative validation.</p>
+<p style="text-align: left;">My passion is to advance tomographic image processing by combining machine learning techniques and the mathematical modeling of imaging physics.</p>
+<p><a href="https://drive.google.com/open?id=1LfJ5i7HZ9PuWbMuwgiIEsSlyOMmfTfEF"><strong>View CV</strong></a></p>
+</div>
+
+<footer>
+<p class="copy">Wenchao Cao &copy; 2019</p>
+<div id="links">
+<ul>
+<li>Mail</li>
+</ul>
+ 
+<ul>
+<li>Google Scholar Publications</li>
+</ul>
+ 
+<ul>
+<li>LinkedIn</li>
+</ul>
+</div>
+</footer></div>
