@@ -4,8 +4,8 @@
 <html>
 <head>
 <style>
-div {margin-left: 600px; margin-right: 600px;  min-width: 500px; 
-  
+div {margin: auto;
+  width: 40%;
 }
 
 </style>
@@ -24,7 +24,7 @@ div {margin-left: 600px; margin-right: 600px;  min-width: 500px;
 <h2>Linear regression (LR) based memory saving BHC algorithm</h2>
 <figure style="text-align: center;">
   <img style="margin-right: auto; margin-left: auto; display: block;" src="https://lh3.googleusercontent.com/zxGDNHWLFUgQA3CguMQo0UJ2tnE_esRhRDyCcatIGBdDPVK6E_sKTCwVw2PHpR2kSyoYycG_wHV6tpoGXCY7bRTJZsIuWQ3n8Z3nLANr22FtiU2S8PPUpQtDT0eIEg-L6b4G7SV2PJ73TvEk8WweZWNvhzGoGqUuy_ug7MYaBUtBEUD1iHMWspBQt8PWri9gVEVAk0JJqbT87vtd6TZvrfDbIgieX5pFAq9Qe3ZIuEN_gkLbpWOS7L7gd9zz8Zr5jOMC8KqkhTGkEvGaEnY5wvONunqHWMe3RXp1RQh_mOfB3p2voZpkIGbz20J_NAoM7Vc3Rsug2XZZbmakWhyH-PvVP-zWOo6IZvGaSydkb-iFMCkz9ovAwIxTbsgAZ8vjlEy8ZX5uJvrHMyrG8Keqy5pS9mcFq8lrHk2XHSr114LOc9XOnXSpNBKfmUrvnZ1IjnVSzBCYbmML2BXh7p8l7AtB0y3ASkvvhzWhXWZjCm-IkjUstkUZOI-O_Piet1v306PZZQKtY5fpTPBce0Z-7KTPVe1uctDLh8Fofpi2xvmLmoDgK5TYfXgR1HpxPYJvKGFUAzQe5QeOlLRQWIPHT1nibbZbrXrPN1i9wjzaj6qt73usYlv6Lbt3rfio8uLAY59AJw7R0UtmvQDT_vYKqINthxkA1s1j29XdMbSdya7HW_9tyG_nQdeCwYyiuFF214BrTRNbTe9R4cZPJ4voRLZ_=w560-h420-no" alt="surf" />
-  <figcaption>A regression function <i>f<\i> that maps the polychromatic curve to the monochromatic plane</figcaption>
+  <figcaption>A regression function <i>f</i> that maps the polychromatic curve to the monochromatic plane</figcaption>
     </figure>
 <p style="text-align: left;">State-of-the-art multi-material BHC algorithms that are tailored to medical imaging often fail to adept to industrial applications for mainly three reasons. First of all, many industrial samples consist of various dense metal materials (titanium, steel, copper, <em>etc</em>). Also, some applications (eg. dimensional metrology) require extremely high resolution and edge preservation. Therefore, they are normally acquired in large datasets (<em>eg.</em> 2000&times;2000&times;3600, 16bit). Last but not least, rapid image processing is often demanded by customers. I have developed an LR based algorithm to meet industrial needs. In contrast to the conventional method, which uses a piece-wise lookup table, the novel method is based on a polynomial representation of the whole imaging system. The results of this method are comparable to (and sometimes better than) those of the conventional method, with only 0.6% of its memory use. Image processing can be finished within 30min on a laptop computer. The efficient use of memory allows my method to process the dataset of a four-material sample in our laboratory without trouble.</p>
 <p><small><strong>Cao W.</strong>, Fardell G., Price B., Dewulf W. "An improved segmentation method for multi-material beam hardening correction in industrial X-ray computed tomography" submitted to Measurement Science and Technology (2019).</small></p>
