@@ -33,7 +33,18 @@ Through the use of finetuning on patient-specific data from pre-trained models o
   <img style="margin-right: auto; margin-left: auto; display: block;" src="https://lh3.googleusercontent.com/pw/AM-JKLW2v48SYoibsJDRo3u35UhaziNY50JTS9OVKyVPxt4weC7bLUFaEkV5F8z_IVqkx5g0ak_i1nLkA-uyJXOpuj8EidcZObiHNVIuElrqs-2EPw5rrZs6F3VubF_rJX_05TzSgv6UTgsXYEx2Xy7D5bc7=w1150-h569-no?authuser=0" />
   <figcaption>Results using 100 noise patches without and with transfer learning </figcaption>
     </figure>
-<p style="text-align: left;">Our preliminary results indicate that the denoising CNN did not generalize well between FBP reconstruction kernels, but is insensitive to dose levels. The goal of this project is to develop a generalizable patient-specific image domain CT denoising method. The hypothesis is a limited number of noise patches from the patient reconstruction is sufficient for generating noisemaps to fine-tune a CNN to denoise the specific patient. Specifically, we aim to investigate the following process: 1. For a single patient, generate noise prediction using uniform patches from the patient reconstruction; 2. Break patient image into patches (e.g. $64\times64\times5$) </p>
+<p style="text-align: left;">We have previously trained a denoising CNN using a diverse range of reconstruction images. Our preliminary results indicate that the denoising CNN did not generalize well between FBP reconstruction kernels, but is insensitive to dose levels. The goal of this project is to develop a generalizable patient-specific image domain CT denoising method. The hypothesis is a limited number of noise patches from the patient reconstruction is sufficient for generating noisemaps to fine-tune the pre-trained CNN to denoise the specific patient. Specifically, we aim to investigate using a limited number of noise patches to apply to the patient reconstruction, so the CNN learns to denoise in a "bootstrapping" manner. </p>
+  
+<h2>Image domain metal artifact simulation and reduction</h2>
+<figure style="text-align: center;">
+  <img style="margin-right: auto; margin-left: auto; display: block;" src="https://photos.google.com/share/AF1QipPctX8DVyZ_9QhsIIrTXBlOb2kP3-EP_Z02r5I-jbI8lQuiPC0f2iFmyj3rg_v8Pw/photo/AF1QipNo01SxsKU1zYSDUAt0auJ--2XQBKFuoKupeMxL?key=WlpmVnZPRVdvTENxa3BjX2l6ZklBWlJfRHdEal93" />
+  <figcaption>Simulated metal artifact vs. real metal artifact </figcaption>
+    </figure>
+<p style="text-align: left;">This project aims at first, collecting a diverse range of metal implants and simlating metal artifact induced images in order to train a neural network for image domain metal artifact reduction; second, finetuning the pre-trained neural network on a specific patient. For the metal artifact simulation, forward projection of the clinical image together with the metal implant with accurate spectral and material information is crucial to the precise estimation of the detector signal of the metal regions. However, the original signal in the non-metal regions is still preferable over the simulation as it encourages the neural network to learn from the true signal with the original image and noise patterns. Therefore, we designed a dual-stream simulation pipeline to enable accurate metal artifact simulation while perserving the original clinical signal at the same time.  A detailed flowchart can be found <li><a href='https://drive.google.com/file/d/1pb2S29IGX_29JB6CZQavrGlRebD5vllL/view?usp=sharing'>here.</a></li>
+
+https://drive.google.com/file/d/1pb2S29IGX_29JB6CZQavrGlRebD5vllL/view?usp=sharing
+  
+  </p>
 
 <footer>
 <p class="copy">Wenchao Cao (曹文超) &copy; 2021</p>
