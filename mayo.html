@@ -37,13 +37,10 @@ Through the use of finetuning on patient-specific data from pre-trained models o
   
 <h2>Image domain metal artifact simulation and reduction</h2>
 <figure style="text-align: center;">
-  <img style="margin-right: auto; margin-left: auto; display: block;" src="https://photos.google.com/share/AF1QipPctX8DVyZ_9QhsIIrTXBlOb2kP3-EP_Z02r5I-jbI8lQuiPC0f2iFmyj3rg_v8Pw/photo/AF1QipNo01SxsKU1zYSDUAt0auJ--2XQBKFuoKupeMxL?key=WlpmVnZPRVdvTENxa3BjX2l6ZklBWlJfRHdEal93" />
+  <img style="margin-right: auto; margin-left: auto; display: block;" src="https://photos.app.goo.gl/QSsoLE2oFiegB1Hj7" />
   <figcaption>Simulated metal artifact vs. real metal artifact </figcaption>
     </figure>
-<p style="text-align: left;">This project aims at first, collecting a diverse range of metal implants and simlating metal artifact induced images in order to train a neural network for image domain metal artifact reduction; second, finetuning the pre-trained neural network on a specific patient. For the metal artifact simulation, forward projection of the clinical image together with the metal implant with accurate spectral and material information is crucial to the precise estimation of the detector signal of the metal regions. However, the original signal in the non-metal regions is still preferable over the simulation as it encourages the neural network to learn from the true signal with the original image and noise patterns. Therefore, we designed a dual-stream simulation pipeline to enable accurate metal artifact simulation while perserving the original clinical signal at the same time.  A detailed flowchart can be found <li><a href='https://drive.google.com/file/d/1pb2S29IGX_29JB6CZQavrGlRebD5vllL/view?usp=sharing'>here.</a></li>
-
-https://drive.google.com/file/d/1pb2S29IGX_29JB6CZQavrGlRebD5vllL/view?usp=sharing
-  
+<p style="text-align: left;">This project aims at first, collecting a diverse range of metal implants and simlating metal artifact induced images in order to train a neural network for image domain metal artifact reduction; second, finetuning the pre-trained neural network on a specific patient. For the metal artifact simulation, forward projection of the clinical image together with the metal implant with accurate spectral and material information is crucial to the precise estimation of the detector signal of the metal regions. However, the original signal in the non-metal regions is still preferable over the simulation as it encourages the neural network to learn from the true signal with the original image and noise patterns. Therefore, we designed a dual-stream simulation pipeline to enable accurate metal artifact simulation while perserving the original clinical signal at the same time.  A detailed flowchart can be found <li><a href='https://drive.google.com/file/d/1pb2S29IGX_29JB6CZQavrGlRebD5vllL/view?usp=sharing'>here.</a></li> 
   </p>
 
 <footer>
