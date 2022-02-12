@@ -31,7 +31,7 @@ Through the use of finetuning on patient-specific data from pre-trained models o
 <h2>Patient-specific uniform patch based denoising</h2>
 <figure style="text-align: center;">
   <img style="margin-right: auto; margin-left: auto; display: block;" src="https://lh3.googleusercontent.com/pw/AM-JKLVb26tzpU8vHTdomsLXsV6mtU83gAkweUtl-87p9qDz9-57uUUDz4_RwA-YgXzT8EGcB3C-5zBRJC-ieaWsYBh4M1WZSTFCbbYxGPUGh-AvPj_g0s0wo7FLkmX5JEGRaFep2HSCrFnqkPYt2_tf0T1F=w734-h556-no?authuser=0" />
-  <figcaption>Results using 100 noise patches without and with transfer learning </figcaption>
+  <figcaption>Patient-specific uniform patch based denoising framework </figcaption>
     </figure>
 <p style="text-align: left;">We have previously trained a denoising CNN using a diverse range of reconstruction images. Our preliminary results indicate that the denoising CNN did not generalize well between FBP reconstruction kernels, but is insensitive to dose levels. The goal of this project is to develop a generalizable patient-specific image domain CT denoising method. The hypothesis is a limited number of noise patches from the patient reconstruction is sufficient for generating noise maps to fine-tune the pre-trained CNN to denoise the specific patient. Specifically, we aim to investigate using a limited number of noise patches to apply to the patient reconstruction, so the CNN learns to denoise in a "bootstrapping" manner. </p>
   
