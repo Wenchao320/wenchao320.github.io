@@ -24,18 +24,18 @@ div {margin: auto;
 <div>
 <h1>Mayo Clinic </h1>
 <p style="text-align: left;">My role at Mayo Clinic is dedicated to harnessing the power of AI to enhance the clinical usability of CT images. Within this domain, we encounter specific challenges that require careful consideration:
+<ol>
+<li>The efficacy of image processing often thrives when applied directly to raw data. Unfortunately, access to raw data is not always feasible. As a result, we focus on image domain algorithms for successful deployment in clinical practice.</li>
 
-1. The efficacy of image processing often thrives when applied directly to raw data. Unfortunately, access to raw data is not always feasible. As a result, we focus on image domain algorithms for successful deployment in clinical practice.
-
-2. While larger datasets typically enhance model generalizability, relying solely on models trained on extensive datasets may not yield optimal results for individual cases. This is due to various factors, including varying imaging protocols, patient conditions, and reconstruction kernels, which can lead to deviations from the training data distribution, thereby impacting the performance of trained models. 
-
-Through the use of finetuning on patient-specific data from pre-trained models on large data, we aim to achieve improved results with efficiency.
+<li>While larger datasets typically enhance model generalizability, relying solely on models trained on extensive datasets may not yield optimal results for individual cases. This is due to various factors, including varying imaging protocols, patient conditions, and reconstruction kernels, which can lead to deviations from the training data distribution, thereby impacting the performance of trained models. </li>
+</ol> 
+Rather than attempting to amass large datasets, our strategy focuses on developing flexible methods that can accommodate diverse data. This allows us to efficiently adapt our models as needed.
   </p>
   
 <h2>A generalizable self-supervised framework for denoising CT images </h2>
 <figure style="text-align: center;">
   <img style="margin-right: auto; margin-left: auto; display: block;" src="https://lh3.googleusercontent.com/pw/AIL4fc9z81qwr5rLRRAjLnQG4pk3zDOfZtOq-J-qNcLZtozckWwq2Mo72FFJ5eYuyXwWCdE3igr0GLY7gSqJoeQcFt6dwJk4yshC2lkystbKCBTCXrHyYRr8jd4ab8uimyifCHPM2bZ0xn_nZyU1bytpXcI2=w1565-h857-s-no?authuser=0" />
-  <figcaption>Schematic outlining the self-supervised CT denoising framework. The upper panel depicts the first phase where a weakly-supervised training scheme is used to optimize a CNN classifier to sort CT image patches into uniform and non-uniform classes. The lower panel depicts the second phase, where the uniform patches were normalized and superimposed on the non-uniform patches to construct a dataset for optimizing a CNN-based denoising autoencoder. </figcaption>
+  <figcaption>Schematic outlining the self-supervised CT denoising framework. </figcaption>
     </figure>
 <p style="text-align: left;">In this research, we address the critical issue of noise in CT imaging. Traditional methods for CT image denoising are hindered by the lack of suitable paired data for the supervised training of deep-learning models. To overcome this limitation, we introduce a self-supervised learning approach that utilizes unlabeled clinical images. Our method employs a two-phase data extraction and model optimization pipeline, leveraging regions of uniform signal intensity to characterize local noise properties. We tested this framework on both a private Mayo Clinic dataset and the public TCIA Pancreas-CT dataset, demonstrating a remarkable 87% noise reduction in low-dose CT images while maintaining anatomical details. Furthermore, our method outperformed conventional denoising models in quantitative comparisons, highlighting its potential as a robust and versatile tool for enhancing CT image quality.</p>
   
